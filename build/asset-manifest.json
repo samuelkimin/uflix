@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5174fd2f.css",
+    "main.js": "/static/js/main.993064e6.js",
+    "static/media/mystery.jpg": "/static/media/mystery.5f5d0282ed5f2cb8b4de.jpg",
+    "static/media/romance.jpg": "/static/media/romance.f5bffaa0ca80c4f299ca.jpg",
+    "static/media/drama.jpg": "/static/media/drama.58c1d444d66878073348.jpg",
+    "static/media/history.jpg": "/static/media/history.a2fb4faba3415c2759f7.jpg",
+    "static/media/family.jpg": "/static/media/family.bb8212a9c0ca28006f2a.jpg",
+    "static/media/scifi.jpg": "/static/media/scifi.03fde15ca27e8eba086d.jpg",
+    "static/media/music.jpg": "/static/media/music.039438e0fe415a4252eb.jpg",
+    "static/media/thriller.jpg": "/static/media/thriller.a93b0466442995a58ac2.jpg",
+    "static/media/crime.jpg": "/static/media/crime.987bc841e4b127020503.jpg",
+    "static/media/pkimin.jpeg": "/static/media/pkimin.9df6d8ce3c28fd301747.jpeg",
+    "static/media/fantasy.jpeg": "/static/media/fantasy.1de4f244c6c6e46062b7.jpeg",
+    "static/media/western.jpg": "/static/media/western.e61694d1fea5def82402.jpg",
+    "static/media/pdavid.jpeg": "/static/media/pdavid.6b34f1fd8086eacfb75f.jpeg",
+    "static/media/action.jpg": "/static/media/action.ea98eb6e90f6d173b998.jpg",
+    "static/media/logoreact.png": "/static/media/logoreact.f153eb9f28437192c6a0.png",
+    "static/media/documentary.jpg": "/static/media/documentary.d50c186b3e1a6960c50a.jpg",
+    "static/media/adventure.jpg": "/static/media/adventure.d4364cf338422a2dc0e6.jpg",
+    "static/media/war.jpg": "/static/media/war.b4d3ebc54ea079ea67fb.jpg",
+    "static/media/animation.jpg": "/static/media/animation.ef446f4dcf98f1ee34b5.jpg",
+    "static/media/comedy.jpg": "/static/media/comedy.69cd69f781399619e725.jpg",
+    "static/media/CircularStd-Medium.otf": "/static/media/CircularStd-Medium.9ffafeddf192e8c8a111.otf",
+    "static/media/pdidi.jpeg": "/static/media/pdidi.a7b9d3cf61799c365fc5.jpeg",
+    "static/media/logowhite.png": "/static/media/logowhite.b4d47a160826f1bffb8e.png",
+    "static/media/pnasbi.jpeg": "/static/media/pnasbi.ecf9a7bc36c25841f5ef.jpeg",
+    "static/media/tvmovie.jpg": "/static/media/tvmovie.b42fe75bbcf7205c3332.jpg",
+    "static/media/horror.jpg": "/static/media/horror.43d337ca2d11cc1b7064.jpg",
+    "static/media/logotmdb.svg": "/static/media/logotmdb.bf7f470b3821af1da7fa249c87dadea3.svg",
+    "index.html": "/index.html",
+    "main.5174fd2f.css.map": "/static/css/main.5174fd2f.css.map",
+    "main.993064e6.js.map": "/static/js/main.993064e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5174fd2f.css",
+    "static/js/main.993064e6.js"
+  ]
+}
