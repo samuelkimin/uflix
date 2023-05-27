@@ -1,0 +1,49 @@
+.footer {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    text-align: center;
+    background-color: rgb(17, 17, 17);
+    color: grey;
+    font-weight: 100;
+    font-family: circularlight;
+    font-size: 0.9em;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.flogo #flogo {
+    width: 500px;
+    height: auto;
+    position: relative;
+    display: block;
+    
+}
+
+#cft {
+    color: rgb(181, 181, 181);
+    font-weight: 900;
+}
+
+#cfts {
+    font-weight: 700;
+    font-family: circular;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#cfds {
+    margin: 2px;
+    color: grey;
+}
+
+@font-face {
+    font-family: 'circularlight';
+    src: url('../Circular/CircularStd-Light.otf');
+  }
+

@@ -12,6 +12,7 @@ import SearchResult from "../pages/SearchResult";
 import { searchMovies } from "../api.js";
 import SelectedGenre from "../pages/SelectedGenre";
 import About from "../pages/About";
+import Footer from "./Footer"
 import "./transitions.css"; // Import your transition styles
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
+      <Footer />
     </div>
   );
 }
