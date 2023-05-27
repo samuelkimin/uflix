@@ -102,6 +102,7 @@
 @media (max-width:800px) {
   .aref {
     width: 80%;
+    font-size: 0.9em;
   }
 }
 .source {
