@@ -1,0 +1,73 @@
+.sort-buttons {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+#arrowimgup {
+  height: 17px;
+  width: 22px;
+  transform: rotate(90deg);
+  filter: invert(1);
+  padding-top: -10px;
+}
+
+#arrowimgdown {
+  height: 17px;
+  width: 22px;
+  transform: rotate(-90deg);
+  filter: invert(1);
+  padding-top: -10px;
+}
+
+#sort-buttons {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  padding: 0;
+  padding-top:5px ;
+  transition: ease 0.5s;
+  width: fit-content;
+  padding-left: 2px;
+}
+
+#sort-buttons:active img{
+  scale: 1.2;
+  filter: hue-rotate(50%);
+}
+
+#sort-buttons:hover {
+  scale: 1.5;
+  filter: hue-rotate(120deg);
+  transition: ease 0.5s;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#hr1 {
+  padding-left: 10px;
+}
+
+.genre-select {
+  padding: 2px;
+  margin-left: 10px;
+  border: solid 2px;
+  border-color: rgb(155, 155, 155);
+  background-color: rgb(81, 81, 81);
+  border-radius: 7px;
+  color: white;
+}
+
+#csbarcont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  height: fit-content;
+  overflow: visible;
+  width:auto;
+  margin-top: 0px;
+}

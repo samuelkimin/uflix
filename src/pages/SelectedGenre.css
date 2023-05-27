@@ -1,0 +1,62 @@
+.gch1 {
+    padding-left: 50px;
+    padding-top: 0px;
+    margin-top: 0px;
+    max-height: fit-content;
+    max-width: 80%;
+}
+
+#gback {
+    position: sticky;
+    top: 26px;
+    left: 10px;
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#backimg {
+    height: 25px;
+    width: 25px;
+    filter: invert(1);
+}
+
+.selected-genre-container {
+    margin-bottom: 100px;
+}
+
+#cbarcont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    height: fit-content;
+    overflow: visible;
+    width:auto;
+    margin-top: -15px;
+}
+
+.morebutton {
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    margin-top: 30px;
+
+    background-color: rgb(84, 0, 107);
+    color: rgb(243, 243, 243);
+    border: solid 1.5px;
+    border-color: rgb(52, 0, 54);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}

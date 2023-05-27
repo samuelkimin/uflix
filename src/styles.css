@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    font-family: 'circular';
+    margin: auto;
+    padding-top: 4em;
+    overflow-x: hidden;
+}
+
+body {
+  touch-action: pan-x pan-y;
+}
+
+html,body {
+  scroll-behavior: smooth;
+  scroll-padding: 20px;
+  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+  zoom: reset;
+  user-zoom: fixed;
+  -ms-content-zooming: none;
+  overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'circular';
+    src: url("./Circular/CircularStd-Medium.otf");
+}
+
+
+a:link {
+    text-decoration: none;
+    color:white;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color:white;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  a:active {
+    text-decoration: none;
+  }
+

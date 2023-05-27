@@ -1,0 +1,286 @@
+.slideshowcont {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 25em;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: default;
+  }
+
+  .slide-transition {
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+  }
+
+  .trending-container {
+    overflow: hidden;
+    max-height: 26em;
+    overflow-y: hidden;
+    position: sticky;
+  }
+  
+  .slide {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .grad {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, black, black, black, rgba(0, 0, 0, 0.714) , rgba(0, 0, 0, 0.202));
+    position: absolute;
+  }
+  
+  .backdrop {
+    height: 100%;
+    right: 1px;
+    width: auto;
+    position: absolute;
+    overflow: hidden;
+    filter: blur(10px);
+  }
+
+  .poster {
+    position: absolute;
+    z-index: 20;
+    bottom: 10%;
+    left: 5%;
+    height: 20em;
+    width: 213.3px;
+  }
+  
+  #ratings {
+    background-color: rgb(255, 234, 0);
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 3.1em;
+    height: 1.1em;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+    text-align: center;
+  }
+  
+  #detail {
+    padding: 0px;
+    position: absolute;
+    bottom: 20%;
+    left: 19em;
+  }
+
+  .movie_releasedates {
+    margin-bottom: 0.5em;
+  }
+  
+  .movie_names {
+    font-weight: bold;
+    font-size: 2em;
+  }
+  
+  .movie_releasedates {
+    margin-top: 5px;
+    color: #888;
+  }
+  
+  .movie_desc {
+    width: 60%;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: fit-content;
+  }
+
+.viewmore {
+    display: flex;
+    position: absolute;
+    left: 19em;
+    bottom: 3em;
+}
+
+#btnsee {
+    background-color: rgb(84, 0, 107);
+    color: rgb(243, 243, 243);
+    border: solid 1.5px;
+    border-color: rgb(52, 0, 54);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* slideshow-transition.css */
+
+.slide-transition-enter {
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: 1;
+}
+
+.slide-transition-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 1000ms ease-in, transform 1000ms ease-in;
+}
+
+.slide-transition-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.slide-transition-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 1000ms ease-out, transform 1000ms ease-out;
+}
+
+
+
+
+  @media (max-width: 730px) {
+    .slideshowcont {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
+        height: 24em;
+        border-radius: 0px;
+        overflow: hidden;
+        margin-top: 0px;
+      }
+      .trending-container {
+        overflow: hidden;
+        max-height: 23em;
+      }
+      
+      .slide {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 0px;
+      }
+    
+      .grad {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.69), rgba(0, 0, 0, 0));
+        position: absolute;
+      }
+      
+      .backdrop {
+        height: 100%;
+        right: 1px;
+        width: auto;
+        position: absolute;
+        overflow: hidden;
+        filter: blur(10px);
+      }
+    
+      .poster {
+        position: absolute;
+        z-index: 20;
+        top: 1.5em;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 10em;
+        width: auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      
+      #ratings {
+        background-color: rgb(255, 234, 0);
+        color: rgb(0, 0, 0);
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+        width: 3.5em;
+        height: 0.8em;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 0.5em;
+        font-size: 0.8em;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      #detail {
+        padding: 10px;
+        position: absolute;
+        top: 12em;
+        left: 0px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .movie_releasedates {
+        margin-bottom: 0.5em;
+      }
+      
+      .movie_names {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+      
+      .movie_releasedates {
+        margin-top: 5px;
+        color: #888;
+        font-size: 0.8em;
+      }
+      
+      .movie_desc {
+        width: 80%;
+        font-size: 0.8em;
+        display: flex;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-height: fit-content;
+        left: 50%;
+        transform: translateX(-50%);
+        position: relative;
+      }
+
+      .viewmore {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        padding-bottom: 2em;
+        width: 100%;
+        height: 3em;
+        background-image: linear-gradient(to top, rgb(12, 12, 12), rgb(12, 12, 12), rgb(12, 12, 12), rgba(12, 12, 12, 0.83) , rgba(12, 12, 12, 0.327));
+    }
+    .seemore {
+        bottom: 1.8em;
+        position: absolute;
+    }
+    /* Add more mobile-specific styles here */
+  }
+  

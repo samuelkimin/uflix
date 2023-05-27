@@ -1,0 +1,70 @@
+#barcont {
+    display: flex;
+    gap: 7px;
+    height: 300px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 10px;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none;
+    align-items: center;
+    padding-left: 15px;
+    scroll-behavior: smooth;
+  }
+
+#htitle {
+  position: relative;
+  display: flex;
+  left: 15px;
+  top: 20px;
+}
+
+#barcont::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mmore {
+    justify-content: center;
+
+    width: 20px;
+    height: 20px;
+    padding-bottom: 50px;
+    padding-right: 40px;
+
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(243, 243, 243);
+    border: none;
+    cursor: pointer;
+}
+
+#arrowimg {
+  width: 40px;
+  height: 40px;
+  filter: invert(1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  cursor: pointer;
+}
+
+.scroll-button {
+  position: sticky;
+  right: -10px;
+  padding-right: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0),rgb(12,12,12));
+  /* tambahkan properti styling tambahan sesuai kebutuhan */
+}
+
+@media (max-width:800px) {
+  .scroll-button {
+    display: none;
+  }
+  #barcont {
+    padding-left: 20px;
+  }
+  #htitle {
+    left: 20px;
+  }
+}

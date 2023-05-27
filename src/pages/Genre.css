@@ -1,0 +1,82 @@
+.genrecontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gtitle {
+  width: 100%;
+  padding-left: 1em;
+  padding-top: 20px;
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+.genrebox {
+  border-radius: 10px;
+  width: 15em;
+  height: 15em;
+  border: 2px solid rgba(109, 109, 109, 0);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  overflow: hidden;
+  transition: 300ms all;
+  box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.genrebox:hover {
+  background-color: black;
+  border: 2px solid white;
+}
+
+.genrebox:hover .genretext {
+  font-size: 1.6em;
+  font-weight: 900;
+  transition: 500ms all;
+  color: white;
+}
+.genrebox:hover img {
+  scale: 1.07;
+  transition: 900ms all;
+  opacity: 10%;
+}
+
+@media (max-width:800px) {
+  .genrebox {
+    width: 19em;
+    height: 9em;
+  }
+  .genretext {
+    width: 10em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    text-shadow: 0 0 0 rgba(255, 255, 255, 0.407);
+  }
+}
+
+.gbimg {
+  width: 100%;
+  height: auto;
+  opacity: 50%;
+  transition: 900ms all;
+}
+
+.genretext {
+  position: absolute;
+  /* text-shadow: 2px 2px 0px rgba(0, 0, 0, 1); */
+  /* background-color: rgb(152, 0, 190); */
+  /* background-color: black; */
+  -webkit-text-stroke: 0.01px white;
+  padding: 5px;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color:rgba(109, 109, 109, 0);
+  transition: 200ms all;
+  /* Tambahkan gaya lainnya sesuai kebutuhan */
+}
