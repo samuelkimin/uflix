@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5174fd2f.css",
-    "main.js": "/static/js/main.993064e6.js",
+    "main.css": "/static/css/main.e3066920.css",
+    "main.js": "/static/js/main.1cba5dac.js",
     "static/media/mystery.jpg": "/static/media/mystery.5f5d0282ed5f2cb8b4de.jpg",
     "static/media/romance.jpg": "/static/media/romance.f5bffaa0ca80c4f299ca.jpg",
     "static/media/drama.jpg": "/static/media/drama.58c1d444d66878073348.jpg",
@@ -22,6 +22,7 @@
     "static/media/war.jpg": "/static/media/war.b4d3ebc54ea079ea67fb.jpg",
     "static/media/animation.jpg": "/static/media/animation.ef446f4dcf98f1ee34b5.jpg",
     "static/media/comedy.jpg": "/static/media/comedy.69cd69f781399619e725.jpg",
+    "static/media/CircularStd-Light.otf": "/static/media/CircularStd-Light.4a1a0bfcc3a53847a945.otf",
     "static/media/CircularStd-Medium.otf": "/static/media/CircularStd-Medium.9ffafeddf192e8c8a111.otf",
     "static/media/pdidi.jpeg": "/static/media/pdidi.a7b9d3cf61799c365fc5.jpeg",
     "static/media/logowhite.png": "/static/media/logowhite.b4d47a160826f1bffb8e.png",
@@ -30,11 +31,11 @@
     "static/media/horror.jpg": "/static/media/horror.43d337ca2d11cc1b7064.jpg",
     "static/media/logotmdb.svg": "/static/media/logotmdb.bf7f470b3821af1da7fa249c87dadea3.svg",
     "index.html": "/index.html",
-    "main.5174fd2f.css.map": "/static/css/main.5174fd2f.css.map",
-    "main.993064e6.js.map": "/static/js/main.993064e6.js.map"
+    "main.e3066920.css.map": "/static/css/main.e3066920.css.map",
+    "main.1cba5dac.js.map": "/static/js/main.1cba5dac.js.map"
   },
   "entrypoints": [
-    "static/css/main.5174fd2f.css",
-    "static/js/main.993064e6.js"
+    "static/css/main.e3066920.css",
+    "static/js/main.1cba5dac.js"
   ]
 }
