@@ -95,13 +95,22 @@ export async function getCastDetail(id) {
   }
 }
 
-export async function getGenreData(genreId, page) {
+export async function getGenreData(genreId, page = 1) {
   try {
     const resp = await axios.get(
       `https://api.themoviedb.org/3/discover/movie?api_key=${apiKey}&with_genres=${genreId}&page=${page}`
     );
-    return resp.data.results;
+    return resp.data?.results || [];
   } catch (error) {
-    console.error(error);
+    console.error("API ERROR:", error);
+    return []; // always return array to prevent map error
   }
 }
+
+export async function getTvSeasons(tvId) {
+  const resp = await axios.get(
+    `https://api.themoviedb.org/3/tv/${tvId}?api_key=${apiKey}`
+  );
+  return resp.data;
+}
+

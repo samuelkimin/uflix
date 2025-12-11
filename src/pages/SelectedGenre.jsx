@@ -33,40 +33,47 @@ function SelectedGenre() {
     37: "Western"
   };
 
-  const genreName = genreMap[genreId];
+  const genreName = genreMap[genreId] || "Unknown Genre";
 
+  // FETCH FIRST PAGE
   useEffect(() => {
-    getGenreData(genreId).then((data) => {
-      setGenreData(data);
-    });
+    getGenreData(genreId, 1)
+      .then((movies) => {
+        setGenreData(movies);
+        setCurrentPage(1);
+      });
   }, [genreId]);
 
+  // LOAD MORE BUTTON
   const handleLoadMore = () => {
-    const nextPage = currentPage + 1;
-    getGenreData(genreId, nextPage)
-      .then((data) => {
-        setGenreData((prevData) => [...prevData, ...data]);
-        setCurrentPage(nextPage);
-      })
-      .catch((error) => {
-        console.error(error);
+    const next = currentPage + 1;
+
+    getGenreData(genreId, next)
+      .then((movies) => {
+        setGenreData(prev => [...prev, ...movies]);
+        setCurrentPage(next);
       });
   };
 
-  const handleGoBack = () => {
-    navigate(-1); // Navigating back by specifying -1
-  };
+  const handleGoBack = () => navigate(-1);
 
   return (
     <div className="selected-genre-container">
-      <button onClick={handleGoBack} id="gback"><img src={backImage} id="backimg" alt="Back" /></button>
+      <button onClick={handleGoBack} id="gback">
+        <img src={backImage} id="backimg" alt="Back" />
+      </button>
+
       <h2 className="gch1">Movie Lists for {genreName} Genre</h2>
+
       <div id="cbarcont">
         {genreData.map((item) => (
           <MoviePreview key={item.id} item={item} className="cmoviepreview" />
         ))}
       </div>
-      <button onClick={handleLoadMore} className="morebutton">Load More</button>
+
+      <button onClick={handleLoadMore} className="morebutton">
+        Load More
+      </button>
     </div>
   );
 }

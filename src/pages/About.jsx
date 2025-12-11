@@ -15,7 +15,7 @@ function About() {
       </h1>
       <hr id="aline1" />
       <br />
-      <h2 className="ah2">Developers</h2>
+      {/* <h2 className="ah2">Developers</h2>
       <div id="peoplesec">
         <div class="row" id="people">
           <div class="col" id="people1">
@@ -67,7 +67,7 @@ function About() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <br />
       <h2 className="ah2">References</h2>
       <div className="arefcon">

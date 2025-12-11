@@ -13,13 +13,14 @@
   flex-direction: row;
   align-items: center;
   color: white;
+  font-size: 0.8em;
 }
 
 #navlogo {
-  width: 1.18em;
-  height: 1.05em;
+  width: 1.58em;
+  height: 1.45em;
   margin-right: -1px;
-  margin-top: 0.11em;
+  margin-top: 0.31em;
 }
 
 .nav-items {
@@ -95,25 +96,26 @@
   .navlist {
     display: none;
   }
+
+  .searchinput {
+  background-color: rgb(32, 32, 32);
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: 1.5px solid rgb(55, 55, 55);
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 30px;
+  width: 100px;
+  }
   .searchbar {
-    display: none;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-right: 4em;
   }
   .searchbarr {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    margin-right: 2em;
-  }
-  .searchbutton {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    margin-left: 180px;
-    margin-top: 4px;
-    opacity: 30%;
-    cursor: pointer;
+    display: none;
   }
   .bar {
     display: flex;
@@ -122,7 +124,7 @@
     margin-left: 1em;
   }
   #navlogo {
-    margin-top: 0.26em;
+    margin-top: 0.6em;
   }
   .searchinput {
     width: 170px;
@@ -176,7 +178,7 @@
   text-decoration: none;
 }
 input[type="checkbox"]:checked ~ #sidebarMenu {
-  transform: translateX(0);
+  transform: translateX(50px);
 }
 
 input[type="checkbox"] {
@@ -192,7 +194,7 @@ input[type="checkbox"] {
   z-index: 110;
   height: 100%;
   width: 100%;
-  top: 27px;
+  top: 25px;
   right: 20px;
   height: 22px;
   width: 22px;

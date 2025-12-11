@@ -78,7 +78,7 @@ const Menu = (props) => {
             </label>
             <div id="sidebarMenu">
               <ul class="sidebarMenuInner">
-                <li className="bar">
+                {/* <li className="bar">
                   <div className="searchbarr">
                     <input
                       type="text"
@@ -95,7 +95,7 @@ const Menu = (props) => {
                       <img src={searchicon} alt="" id="sicon" />
                     </button>
                   </div>
-                </li>
+                </li> */}
                 <li>
                   <NavLink to="/" className="nlinks">
                     Home

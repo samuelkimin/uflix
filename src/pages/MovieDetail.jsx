@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { getMovieDetail, watchMovie } from "../api.js";
 import { useParams, useNavigate } from "react-router-dom";
 import imageNull from "./image.png";
@@ -15,7 +15,26 @@ function MovieDetail() {
   const [videoUrl, setVideoUrl] = useState("");
   const [videoId, setVideoId] = useState("");
   const [isMuted, setIsMuted] = useState(true);
-  const navigate = useNavigate(); // Using useNavigate instead of useHistory
+  const [showPlayer, setShowPlayer] = useState(false);
+
+  const navigate = useNavigate();
+  const trailerRef = useRef(null);
+  const ytPlayer = useRef(null);
+
+  // Load YouTube Player API only once
+  useEffect(() => {
+    const tag = document.createElement("script");
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.body.appendChild(tag);
+
+    window.onYouTubeIframeAPIReady = () => {
+      if (trailerRef.current && videoId) {
+        ytPlayer.current = new window.YT.Player(trailerRef.current, {
+          events: {},
+        });
+      }
+    };
+  }, [videoId]);
 
   useEffect(() => {
     getMovieDetail(id).then((data) => setMovieData(data));
@@ -26,8 +45,8 @@ function MovieDetail() {
       if (videoResults && videoResults.length > 0) {
         const videoKey = videoResults[0].key;
         const url = `https://www.youtube.com/embed/${videoKey}`;
-        setVideoUrl(url);
         setVideoId(videoKey);
+        setVideoUrl(url);
       }
     });
   }, [id]);
@@ -44,105 +63,126 @@ function MovieDetail() {
     runtime,
     genres,
   } = movieData;
+
   const title = original_title || name;
   const releaseDate = release_date || first_air_date;
-  let voteAverage = parseFloat(vote_average).toFixed(1);
+  const voteAverage = vote_average ? parseFloat(vote_average).toFixed(1) : "N/A";
+  const genreNames = genres ? genres.map((g) => g.name).join(", ") : "";
 
-  const handleGoBack = () => {
-    navigate(-1); // Navigating back by specifying -1
-  };
-  const genreNames = genres ? genres.map((genre) => genre.name).join(", ") : "";
+  const isSeries = !!first_air_date;
 
-  const handleUnmute = () => {
-    setIsMuted((prevState) => !prevState);
+  // Videasy URL
+  const videasyMovieURL = `https://player.videasy.net/movie/${id}`;
+  const videasySeriesURL = `https://player.videasy.net/tv/${id}/1/1`;
+
+  const finalVideasyURL = isSeries ? videasySeriesURL : videasyMovieURL;
+
+  // 🔥 PAUSE TRAILER Saat Play ditekan
+  const openPlayer = () => {
+    if (ytPlayer.current && ytPlayer.current.pauseVideo) {
+      ytPlayer.current.pauseVideo();
+    }
+    setShowPlayer(true);
   };
 
   return (
     <div className="detailcont">
       <div className="dgrad"></div>
+
       <div className="firstcont">
-        <button onClick={handleGoBack} id="back">
+        <button onClick={() => navigate(-1)} id="back">
           <img src={backImage} id="backimg" alt="Back" />
         </button>
+
         <img
           src={`https://image.tmdb.org/t/p/w300/${backdrop_path}`}
           alt="Backdrop"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = imageNull;
-          }}
+          onError={(e) => (e.target.src = imageNull)}
           className="backdropimg"
         />
+
         <div className="topdetail">
           <img
             src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-            alt="Please Wait..."
-            onError={(e) => {
-              e.target.onerror = imageNull;
-              e.target.src = imageNull;
-            }}
+            alt="Loading..."
+            onError={(e) => (e.target.src = imageNull)}
             className="imgdt"
           />
+
           <div className="detailtext">
-            <h2 id="dtitle" class="marquee">
-              {title}
-            </h2>
+            <h2 id="dtitle">{title}</h2>
+
             <div className="dinfo">
               <div id="dratings">
                 <p>{voteAverage}</p>
               </div>
               <div id="rdate">
                 <p>
-                  {" "}
                   {releaseDate} • {runtime}m • {genreNames}
                 </p>
               </div>
             </div>
+
             <p className="ovtext">{overview}</p>
+
+            {/* PLAY BUTTON */}
+            <button className="playbtn" onClick={openPlayer}>
+              ▶ Play
+            </button>
           </div>
         </div>
       </div>
-      {/* <div className="dbvideo">
-        {videoUrl && (
-          <iframe
-            src={`${videoUrl}?controls=0&loop=1&autoplay=1&mute=1&playlist=${videoId}`}
-            loop autoplay
-            width="2000"
-            height="1000"
-            frameBorder="0"
-            allowFullScreen
-            title="Movie Video"
-            className="dbtrailer"
-          />
-        )}
-        <div id="dbvgrad"></div>
-      </div> */}
+
+      {/* Trailer */}
       <div className="dvideo">
         <div className="dtitletrailer">
           <h2>Trailer</h2>
         </div>
+
         {videoUrl && (
           <iframe
+            ref={trailerRef}
             src={`${videoUrl}?controls=0&loop=1&autoplay=1&mute=${
               isMuted ? 1 : 0
-            }&rel=0&playlist=${videoId}`}
-            loop
-            autoPlay
+            }&rel=0&playlist=${videoId}&enablejsapi=1`}
             width="1000"
             height="500"
             frameBorder="0"
+            allow="autoplay"
             allowFullScreen
-            title="Movie Video"
             className="dtrailer"
           />
         )}
-        <button onClick={handleUnmute} className="mbtn">
+
+        <button onClick={() => setIsMuted(!isMuted)} className="mbtn">
           {isMuted ? <img src={muteIcon} /> : <img src={unmuteIcon} />}
         </button>
       </div>
+
       <div className="recom">
         <MovieList />
       </div>
+
+      {/* POPUP VIDEASY PLAYER */}
+      {showPlayer && (
+        <div className="player-overlay">
+          <div className="player-container">
+            <button
+              className="close-player"
+              onClick={() => setShowPlayer(false)}
+            >
+              ✕
+            </button>
+
+            <iframe
+              src={finalVideasyURL}
+              allowFullScreen
+              frameBorder="0"
+              className="player-iframe"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
