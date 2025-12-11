@@ -127,7 +127,7 @@ function MovieDetail() {
 
             {/* PLAY BUTTON */}
             <button className="playbtn" onClick={openPlayer}>
-              ▶ Play
+              ▶ Watch on uFlix
             </button>
           </div>
         </div>
