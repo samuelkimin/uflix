@@ -265,7 +265,6 @@ function TvDetail() {
               allowFullScreen
               frameBorder="0"
               className="player-iframe"
-              sandbox="allow-scripts allow-same-origin"
             />
           </div>
         </div>
