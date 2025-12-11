@@ -80,30 +80,87 @@
    RESPONSIVE MOBILE TV POPUP
    ============================ */
 @media (max-width: 800px) {
+  /* Popup full screen untuk mobile */
+  .tv-popup {
+    width: 100vw;
+    height: 100vh;
+    padding: 15px;
+    border-radius: 0;
+    background: #0b0b0b;
+    overflow-y: auto;
+  }
+
+  /* Header: poster di atas, center */
   .tv-popup-header {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    margin-bottom: 15px;
   }
 
   .tv-popup-poster {
-    width: 150px;
+    width: 120px;
+    margin-bottom: 10px;
+    border-radius: 8px;
   }
 
+  /* Dropdown season di tengah */
   .tv-season-select {
     justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  /* Episode list: horizontal scroll ala Netflix */
+  .tv-episode-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 12px;
+    padding-bottom: 10px;
   }
 
   .tv-episode-item {
+    min-width: 150px;
+    flex-shrink: 0;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    transition: transform 0.2s;
     text-align: center;
-    gap: 8px;
   }
 
-  .playbtn.small {
+  .tv-episode-item:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .tv-episode-item strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .tv-episode-item button.playbtn {
+    margin-top: 5px;
+    padding: 6px 12px;
+    font-size: 0.9em;
     width: 100%;
   }
 
-  .player-iframe {
-    height: 350px !important;
+  /* Scrollbar minimal */
+  .tv-episode-list::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .tv-episode-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+  }
+
+  .tv-episode-list::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
