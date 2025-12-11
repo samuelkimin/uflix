@@ -124,7 +124,7 @@
     margin-left: 1em;
   }
   #navlogo {
-    margin-top: 0.6em;
+    margin-top: 0.3em;
   }
   .searchinput {
     width: 170px;
@@ -138,6 +138,10 @@
   #sidebarMenu {
     display: flex !important;
   }
+  #sicon {
+    margin-top: 0.15em;
+}
+
 }
 
 #sidebarMenu {

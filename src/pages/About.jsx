@@ -5,6 +5,7 @@ import pKimin from "../assets/pkimin.jpeg";
 import reactLogo from "../assets/logoreact.png";
 import tmdbLogo from "../assets/logotmdb.svg";
 import "./About.css";
+import AdRow from "../components/AdRow";
 
 function About() {
   return (

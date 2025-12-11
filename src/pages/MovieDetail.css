@@ -261,7 +261,7 @@
     .detailtext {
         left: 50%;
         transform: translateX(-50%);
-        top:400px;
+        top:390px;
         text-align: left;
         font-size: 1em;
         width: 90vw;
@@ -280,7 +280,7 @@
     .ovtext {
         max-width: 100%;
         text-align: justify;
-        max-height: 13.3em;
+        max-height: 11.3em;
         overflow-y: scroll;
         -webkit-line-clamp: 40;
     -webkit-box-orient: vertical;
@@ -377,6 +377,10 @@
   border: none;
 }
 
+.playbtn {
+    width: 100%;
+}
+
 }
 
 /* PLAY BUTTON */
@@ -397,7 +401,7 @@
 .playbtn:hover {
   background: #7807b0;
   color: white;
-   box-shadow: 0 0px 20px rgba(106, 0, 120, 0.906);
+   box-shadow: 0 0px 20px rgba(106, 0, 120, 0.963);
 }
 
 /* PLAYER POPUP OVERLAY */

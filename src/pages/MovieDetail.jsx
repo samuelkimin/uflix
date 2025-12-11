@@ -8,6 +8,7 @@ import MovieList from "../components/MovieList";
 import "../components/MovieList.css";
 import muteIcon from "../assets/mute.png";
 import unmuteIcon from "../assets/unmute.png";
+// import AdRow from "../components/AdRow.jsx";
 
 function MovieDetail() {
   const { id } = useParams();
