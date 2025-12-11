@@ -43,7 +43,7 @@
 }
 
 .nlink a:hover {
-  text-decoration: 900;
+  text-decoration: none;
 }
 
 .searchbar {
@@ -141,6 +141,9 @@
   #sicon {
     margin-top: 0.15em;
 }
+ .navlink {
+    font-size: 0.8em;
+  }
 
 }
 
@@ -194,13 +197,13 @@ input[type="checkbox"] {
   transition: all 0.3s;
   box-sizing: border-box;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   z-index: 110;
   height: 100%;
   width: 100%;
-  top: 25px;
-  right: 20px;
-  height: 22px;
+  right: 1.5em;
+  height: 22px; 
+  top: 1.5em;
   width: 22px;
   display: none;
 }

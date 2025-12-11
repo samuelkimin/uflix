@@ -73,7 +73,7 @@ function MovieDetail() {
   const isSeries = !!first_air_date;
 
   // Videasy URL
-  const videasyMovieURL = `https://player.videasy.net/movie/${id}`;
+  const videasyMovieURL = `https://player.videasy.net/movie/${id}?overlay=true`;
   const videasySeriesURL = `https://player.videasy.net/tv/${id}/1/1`;
 
   const finalVideasyURL = isSeries ? videasySeriesURL : videasyMovieURL;

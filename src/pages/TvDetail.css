@@ -1,0 +1,109 @@
+/* ============================
+   TV DETAIL POPUP STYLES
+   ============================ */
+
+/* Container popup TV */
+.tv-popup {
+  padding: 20px;
+  background: #0b0b0b;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Header popup TV (poster + title) */
+.tv-popup-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Poster TV pada popup */
+.tv-popup-poster {
+  width: 120px;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown Season */
+.tv-season-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  color: white;
+  font-size: 1.1em;
+}
+
+.tv-season-select select {
+  padding: 8px 12px;
+  background: #1b1b1b;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Episode list */
+.tv-episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* Episode card */
+.tv-episode-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Tombol play episode */
+.playbtn.small {
+  padding: 6px 14px;
+  font-size: 0.9em;
+  width: auto;
+}
+
+.episode-section {
+  gap: 6px;
+  top: 1000px;
+}
+
+
+/* ============================
+   RESPONSIVE MOBILE TV POPUP
+   ============================ */
+@media (max-width: 800px) {
+  .tv-popup-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .tv-popup-poster {
+    width: 150px;
+  }
+
+  .tv-season-select {
+    justify-content: center;
+  }
+
+  .tv-episode-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .playbtn.small {
+    width: 100%;
+  }
+
+  .player-iframe {
+    height: 350px !important;
+  }
+}

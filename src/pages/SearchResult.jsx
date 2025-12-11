@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { searchMovies, getGenreData } from "../api.js";
 import MoviePreview from "../components/MoviePreview";
 import CastPreview from "../components/CastPreview";
+import TvPreview from "../components/TvPreview";
 import "./SearchResult.css";
 import arrowImage from "../assets/back.png";
 
@@ -135,9 +136,12 @@ function SearchResult() {
           if (item.media_type === "movie") {
             console.log("Movie:", item);
             return <MoviePreview key={item.id} item={item} />;
-          } else if (item.media_type === "person") {
-            console.log("Person:", item);
-            return <CastPreview key={item.id} cast={item} />;
+          // } else if (item.media_type === "person") {
+          //   console.log("Person:", item);
+          //   return <CastPreview key={item.id} cast={item} />;
+          } else if (item.media_type === "tv") {
+            console.log("TV Show:", item);
+            return <TvPreview key={item.id} item={item} />;
           }
 
           return null;

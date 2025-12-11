@@ -7,6 +7,7 @@ import Cast from "../pages/Cast";
 import Genre from "../pages/Genre";
 import ComingSoon from "../pages/ComingSoon";
 import MovieDetail from "../pages/MovieDetail";
+import TvDetail from "../pages/TvDetail";
 import CastDetail from "../pages/CastDetail";
 import SearchResult from "../pages/SearchResult";
 import { searchMovies } from "../api.js";
@@ -40,6 +41,7 @@ function App() {
             <Route path="/comingsoon" element={<ComingSoon />} />
             <Route path="/about" element={<About />} />
             <Route path="/moviedetail/:id" element={<MovieDetail />} />
+            <Route path="/tvdetail/:id" element={<TvDetail />} />
             <Route path="/castdetail/:id" element={<CastDetail />} />
             <Route
               path="/search/:searchval"
