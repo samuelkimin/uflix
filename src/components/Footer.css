@@ -47,3 +47,33 @@
     src: url('../Circular/CircularStd-Light.otf');
   }
 
+
+  .follow-us {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 8px;
+margin-top: 8px;
+}
+
+.social-icon {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 2.5em;
+height: 2.5em;
+background-color: #000000;
+border-radius: 50%;
+overflow: hidden;
+transition: transform 0.2s;
+}
+
+.social-icon img {
+width: 25px;
+height: 25px;
+filter: invert(1);
+}
+
+.social-icon:hover {
+transform: scale(1.1);
+}
