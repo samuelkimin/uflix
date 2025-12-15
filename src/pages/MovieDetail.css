@@ -353,7 +353,7 @@
   max-width: 1000px;
   background: #000;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* CLOSE BUTTON */
@@ -374,8 +374,9 @@
 
 /* IFRAME PLAYER */
 .player-iframe {
+  flex: 1;
   width: 100%;
-  height: 95%;
+  height: 70%;
   border: none;
 }
 
