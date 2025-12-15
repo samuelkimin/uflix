@@ -353,7 +353,7 @@
   max-width: 1000px;
   background: #000;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* CLOSE BUTTON */
