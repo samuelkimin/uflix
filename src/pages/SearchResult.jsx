@@ -6,6 +6,8 @@ import CastPreview from "../components/CastPreview";
 import TvPreview from "../components/TvPreview";
 import "./SearchResult.css";
 import arrowImage from "../assets/back.png";
+import AdBanner from "../components/AdBanner.jsx";
+import AdRow from "../components/AdRow.jsx";
 
 function SearchResult() {
   const { searchval } = useParams();
@@ -147,6 +149,8 @@ function SearchResult() {
           return null;
         })}
       </div>
+      <AdRow />
+      <AdBanner />
     </div>
   );
 }

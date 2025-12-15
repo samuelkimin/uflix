@@ -69,6 +69,7 @@ function About() {
           </div>
         </div>
       </div> */}
+      <AdRow />
       <br />
       <h2 className="ah2">References</h2>
       <div className="arefcon">
